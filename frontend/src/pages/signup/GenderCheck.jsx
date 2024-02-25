@@ -29,3 +29,5 @@ export const GenderCheck = ({ onCheckboxChange, selectedGender }) => {
     </div>
   )
 }
+
+export default GenderCheck;
