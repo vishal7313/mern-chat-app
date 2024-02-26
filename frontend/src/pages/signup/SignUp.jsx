@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
-import GenderCheck from "./GenderCheck";
-import { useState } from "react";
-import useSignup from "../../hooks/useSignup";
+import { Link } from 'react-router-dom';
+import GenderCheck from './GenderCheck';
+import { useState } from 'react';
+import useSignup from '../../hooks/useSignup';
 
 export const Signup = () => {
 
@@ -78,8 +78,10 @@ export const Signup = () => {
 					</div>
 
 					<div>
-						<label className='label'>
-							<span className='text-base label-text'>Confirm Password</span>
+						<label className='label p-2'>
+							<span className='text-base label-text'>
+                                Confirm Password
+                            </span>
 						</label>
 						<input
 							type="password"
@@ -93,7 +95,7 @@ export const Signup = () => {
 					<GenderCheck onCheckboxChange = { handleCheckboxChange } selectedGender={ inputs.gender }/>
 
 					<Link
-						to={"/login"}
+						to={'/login'}
 						className='text-sm hover:underline hover:text-blue-600 mt-2 inline-block'
 					>
 						Already have an account?
