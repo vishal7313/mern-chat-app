@@ -7,13 +7,13 @@ import useConversation from '../../zustand/useConversation';
 export const MessageContainer = () => {
     const {selectedConversation, setSelectedConversation} = useConversation(); //zustand store
 
-    useEffect(() => {
+	useEffect(() => {
         return () => setSelectedConversation(null)
     }, [setSelectedConversation]);
 
-    return (
-        <div className='md:min-w-[450px] flex flex-col'>
-            {!selectedConversation ? (
+	return (
+		<div className='md:min-w-[450px] flex flex-col'>
+			{!selectedConversation ? (
 				<NoChatSelected />
 			) : (
 				<>
@@ -26,9 +26,10 @@ export const MessageContainer = () => {
 					<MessageInput />
 				</>
 			)}
-        </div>
-    )
+		</div>
+	)
 }
+export default MessageContainer;
 
 const NoChatSelected = () => {
 	return (
