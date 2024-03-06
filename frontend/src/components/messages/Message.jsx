@@ -1,6 +1,7 @@
 import React from 'react'
 import { useAuthContext } from '../../context/AuthContext';
 import useConversation from '../../zustand/useConversation';
+import { extractTime } from '../../utils/extractTime';
 
 export const Message = ({message}) => {
     const {authUser} = useAuthContext();
@@ -25,7 +26,7 @@ export const Message = ({message}) => {
             
             <div className={`chat-bubble text-white ${bubbleBgColor}`}>{message.message}</div>
             <div className="chat-footer opacity-50 text-xs flex-gap-1 items-center">
-                12:46
+                { extractTime(message.createdAt) }
             </div>
         </div>
     )
